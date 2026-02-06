@@ -591,7 +591,7 @@
                 <div class="t-container_100 ">
                     <div class="t-width t-width_100 ">
                         <!-- nominify begin -->
-                        <audio id="bg-sound">
+                        <audio autoplay id="bg-sound">
                             <source
                                 src="images/music.mpeg">
                         </audio>
@@ -603,9 +603,7 @@
                                 let fadeTime = 300;
                                 //Врямя смены иконок
                                 myAudio.volume = 0.4;
-                                myAudio.ready(() => {
-                                    myAudio.play();
-                                });
+                                myAudio.play();
                                 //Задаём громкость
                                 $(".stopbgmusic").hide();
                                 $(".playbgmusic").click(function (e) {
