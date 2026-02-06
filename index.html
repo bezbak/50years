@@ -598,11 +598,13 @@
                         <script>
                             $(document).ready(function () {
                                 myAudio = document.getElementById("bg-sound");
-                                myAudio.play();
-
+                                
                                 let fadeTime = 300;
                                 //Врямя смены иконок
                                 myAudio.volume = 0.4;
+                                myAudio.ready(() => {
+                                    myAudio.play();
+                                });
                                 //Задаём громкость
                                 $(".stopbgmusic").hide();
                                 $(".playbgmusic").click(function (e) {
